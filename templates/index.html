@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='{{url_for("static", filename="css/style.css")}}'/>
+</head>
+<body>
+    <section class="ecommerCampus">
+        <div class="menu_lateral">
+            <div class="logo">
+                <h1>CampusShop</h1>
+            </div>
+            <button class="abrir" id="abrir"><i class='bx bx-menu'></i></button>
+            <div class="opciones" id="menu">
+                <button class="cerrar" id="cerrar"><i class='bx bx-menu'></i></button>
+                <div class="opciones_menu">
+                    <ul>
+                        <li><a href="/">Todos los productos</a></li>
+                        <li><a href="views/abrigos">Abrigos</a></li>
+                        <li><a href="views/camisetas">Camisetas</a></li>
+                        <li><a href="views/pantalones">Pantalones</a></li>
+                        <li><a href="views/carrito" class="ver-carrito">Carrito</a></li>
+                    </ul>
+                </div>
+                <div class="Carrito">
+                        <a href="views/carrito.html">Carrito</a>
+                        <h1>3</h1>
+                </div>
+            </div>
+        </div>
+        <div class="productos">
+            <h1>Todos los productos</h1>
+            <div class="imagenes_productos">
+            <div class="producto">
+                <div class="Abrigos">
+                    <img src='{{data[0].get("img")}}'>
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>{{data[0].get("description")}}</h3>
+                            <h2>{{data[0].get("value")}}</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="Abrigos">
+                    <img src="storage/img/abrigo2.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Abrigo 02</h3>
+                            <h2>$ 2.000</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="Abrigos">
+                    <img src="storage/img/abrigo3.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Abrigo 03</h3>
+                            <h2>$ 2.500</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="Abrigos">
+                    <img src="storage/img/abrigo4.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Abrigo 04</h3>
+                            <h2>$ 2.000</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="Abrigos">
+                    <img src="storage/img/abrigo5.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Abrigo 05</h3>
+                            <h2>$ 2.000</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="camisetas">
+                    <img src="storage/img/camiseta1.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Camiseta 01</h3>
+                            <h2>$ 1.000</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="camisetas">
+                    <img src="storage/img/camiseta2.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Camiseta 02</h3>
+                            <h2>$ 2.000</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="camisetas">
+                    <img src="storage/img/camiseta3.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Camiseta 03</h3>
+                            <h2>$ 2.500</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="camisetas">
+                    <img src="storage/img/camiseta4.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Camiseta 04</h3>
+                            <h2>$ 2.000</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="camisetas">
+                    <img src="storage/img/camiseta5.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Camiseta 05</h3>
+                            <h2>$ 2.000</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="pantalon">
+                    <img src="storage/img/pantalon1.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Pantalon 01</h3>
+                            <h2>$ 1.000</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="pantalon">
+                    <img src="storage/img/pantalon2.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Pantalon 02</h3>
+                            <h2>$ 2.000</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="pantalon">
+                    <img src="storage/img/pantalon3.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Pantalon 03</h3>
+                            <h2>$ 2.500</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="pantalon">
+                    <img src="storage/img/pantalon4.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Pantalon 04</h3>
+                            <h2>$ 2.000</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="producto">
+                <div class="pantalon">
+                    <img src="storage/img/pantalon5.jpg">
+                    <div class="descripcion_total">
+                        <div class="descripcion">
+                            <h3>Pantalon 05</h3>
+                            <h2>$ 2.000</h2>
+                        </div>
+                        <div class="boton">
+                            <button>Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>

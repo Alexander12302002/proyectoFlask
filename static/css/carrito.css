@@ -1,0 +1,349 @@
+    @import url(variables.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--color-principal);
+}
+
+.ecommerCampus{
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "menu product";
+}
+
+.abrir, .cerrar{
+    display: none;
+}
+
+.menu_lateral .opciones .opciones_menu ul .ver-carrito{
+    display: none;
+}
+
+.menu_lateral{
+    width: 50vh;
+    grid-area: menu;
+}
+
+.menu_lateral .logo{
+    color: var(--color-cuarto);
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.menu_lateral .opciones{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu_lateral .opciones .opciones_menu ul li{
+    margin: 2vh;
+    font-size: 1.3em;
+    list-style: none;
+}
+
+.menu_lateral .opciones .opciones_menu ul li a{
+    text-decoration: none;
+    color: var(--color-cuarto);
+}
+
+.menu_lateral .opciones .opciones_menu ul li a:hover{
+    color: var(--color-fuentes);
+}
+
+.menu_lateral .opciones .Carrito{
+    margin-top: 5vh;
+    display: flex;
+}
+
+.menu_lateral .opciones .Carrito a{
+    text-decoration: none;
+    color: var(--color-cuarto);
+    font-size: 1.3em;
+    margin-right: 20vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu_lateral .opciones .Carrito h1{
+    background: white;
+    padding: 1vh;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.productos{
+    height: 96vh;
+    margin: 1vh;
+    border-radius: 10px;
+    background: var(--color-cuarto);
+    grid-area: product;
+    display: flex;
+    flex-direction: column;
+}
+
+.productos h1{
+    color: var(--color-fuentes);
+    margin: 1vh;
+}
+
+.productos_comprados{
+    margin: 10px;
+    overflow-y: scroll;
+    height: 75vh;
+}
+
+.productos_comprados .item{
+    border-radius: 30px;
+    margin-top: 10px;
+    background: white;
+    display: flex;
+
+}
+
+.productos_comprados .item img{
+    width: 30%;
+    width: 100px;
+    height: 130px;
+    margin: 10px;
+}
+
+.productos_comprados .item .imagen, .descripcion, .cantidad, .precio,
+.total, .cancelar{
+    width: 30%;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    font-size: .8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.cancelar i{
+    font-size: 4em;
+}
+
+.cancelar i:hover{
+    cursor: pointer;
+    color: red;
+}
+
+
+.opciones_carrito{
+    margin-left: 3vh;
+    margin-right: 3vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.opciones_carrito .vaciar{
+    display: flex;
+}
+
+.opciones_carrito .vaciar a{
+    text-decoration: none;
+    color: var(--color-fuentes);
+}
+
+.opciones_carrito button{
+    background: var(--color-tercero);
+    border: none;
+    height: 5vh;
+    width: 25vh;
+    border-radius: 15px;
+    color: var(--color-menu-movil);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+}
+
+.opciones_carrito .Comprar{
+    width: 40vh;
+    border-radius: 30px;
+    background: var(--color-tercero);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.opciones_carrito .Comprar .compra_total{
+    margin: 7px;
+    font-size: .6em;
+}
+
+.opciones_carrito .Comprar .Comprar_Ahora{
+    margin: 7px;
+    font-size: .6em;
+}
+
+
+@media (width <= 800px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .menu_lateral .opciones .Carrito h1{
+        display: none;
+    }
+    
+    .menu_lateral .opciones .Carrito a{
+        display: none;
+    }
+    
+    .abrir,  .cerrar i{
+        color: var(--color-fuentes);
+    }
+
+    .menu_lateral .opciones .opciones_menu ul .ver-carrito{
+        display: block;
+    }
+    
+    .ecommerCampus{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+        "menu"
+        "product";
+        }
+    
+    .menu_lateral i{
+        color: var(--color-fuentes);
+    }
+    
+    .menu_lateral{
+        display: flex;
+        width: 100%;
+        height: 10vh;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menu_lateral .logo{
+        height: 10vh;
+        margin: 2vh;
+        color: var(--color-cuarto);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .menu_lateral .abrir{
+        margin: 2vh;
+        font-size: 2em;
+    }
+    
+    .imagenes_productos{
+        justify-content: center;
+    }
+    
+    .abrir, .cerrar{
+        display: block;
+        background: none;
+        border: none;
+    }
+    
+    .opciones{
+        background: var(--color-cuarto);
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    
+    .opciones.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .opciones .cerrar{
+        margin: 2vh;
+    }
+    
+    .opciones .cerrar i{
+        font-size: 3em;
+    }
+    
+    .opciones .opciones_menu{
+        background: var(--color-menu-movil);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .opciones .opciones_menu li{
+        margin-bottom: 2vh;
+    }
+    
+    .productos{
+        width: 100%;
+    }
+
+    .productos .productos_comprados{
+        display: flex;
+        overflow-x: scroll;
+        flex-wrap: wrap;
+    }
+
+    .productos .productos_comprados .item{
+        display: flex;
+        flex-direction: column;
+        width: 25vh;
+        margin: 1vh;
+        align-items: center;    
+        font-size: .9em;
+    }
+
+    .productos_comprados .item .imagen,
+    .descripcion, .cantidad, .precio, .total, .cancelar{
+        align-items: center;    
+        width: 100%;
+        margin-top: 1vh;
+        margin-left: 0vh;
+        margin-right: 0vh;
+    }
+
+    .opciones_carrito{
+        margin: 0vh;
+        width: 100%;
+    }
+
+    .opciones_carrito .Comprar{
+        width: 35vh;
+    }
+
+    .opciones_carrito .Comprar .Comprar_Ahora{
+        margin: 0vh;
+    }
+
+    .opciones_carrito .Comprar .Comprar_Ahora button{
+        width: 25vh;
+        color: var(--color-fuentes);
+        margin: 1px;
+        background: var(--color-menu-movil);
+    }
+
+    .opciones_carrito .Comprar .compra_total{
+        margin: 0px;
+    }
+    
+    }

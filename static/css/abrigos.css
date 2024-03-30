@@ -1,0 +1,299 @@
+@import url(variables.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--color-principal);
+}
+
+.ecommerCampus{
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "menu product";
+}
+
+.abrir, .cerrar{
+    display: none;
+}
+
+.menu_lateral .opciones .opciones_menu ul .ver-carrito{
+    display: none;
+}
+
+.menu_lateral{
+    width: 50vh;
+    grid-area: menu;
+}
+
+.menu_lateral .logo{
+    color: var(--color-cuarto);
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.menu_lateral .opciones{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu_lateral .opciones .opciones_menu ul li{
+    margin: 2vh;
+    font-size: 1.3em;
+    list-style: none;
+}
+
+.menu_lateral .opciones .opciones_menu ul li a{
+    text-decoration: none;
+    color: var(--color-cuarto);
+}
+
+.menu_lateral .opciones .opciones_menu ul li a:hover{
+    color: var(--color-fuentes);
+}
+
+.menu_lateral .opciones .Carrito{
+    margin-top: 5vh;
+    display: flex;
+}
+
+.menu_lateral .opciones .Carrito a{
+    text-decoration: none;
+    color: var(--color-cuarto);
+    font-size: 1.3em;
+    margin-right: 20vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu_lateral .opciones .Carrito h1{
+    background: white;
+    padding: 1vh;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.productos{
+    height: 96vh;
+    margin: 1vh;
+    border-radius: 10px;
+    background: var(--color-cuarto);
+    grid-area: product;
+    display: flex;
+    flex-direction: column;
+}
+
+.productos h1{
+    color: var(--color-fuentes);
+    margin: 1vh;
+}
+
+.imagenes_productos{
+    width: 100%;
+    display: flex;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+}
+
+.imagenes_productos::-webkit-scrollbar{
+    width: 8px;
+}
+
+.producto{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    background: var(--color-fuentes);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.imagenes_productos .descripcion_total{
+    border-radius: 15px;
+    height: 10vh;
+    width: 30vh;    
+    background: var(--color-tercero);
+    display: flex;
+}
+
+.imagenes_productos .descripcion_total .descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1vh;
+    color: var(--color-menu-movil);
+    width: 70%;
+}
+
+.imagenes_productos  .descripcion_total .descripcion h2{
+    font-size: 1em;
+    margin: 1vh;
+}
+
+
+.imagenes_productos img{
+    width: 180px;
+    height: 200px;
+}
+
+.imagenes_productos .descripcion_total .boton{
+    display: flex;
+    align-items: flex-end;
+    margin: 1vh;
+}
+
+.imagenes_productos .descripcion_total .boton button{
+    background: var(--color-cuarto);
+    border: none;
+    height: 5vh;
+    width: 10vh;
+    border-radius: 15px;
+    color: var(--color-menu-movil);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+}
+
+.imagenes_productos .descripcion_total .boton button:hover{
+    background: var(--color-menu-movil);
+    color: var(--color-fuentes);
+    cursor: pointer;
+}
+
+.Abrigos, .camisetas , .pantalon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Abrigos{
+    font-size: .7em;
+}
+
+.camisetas{
+    font-size: .6em;
+}
+
+.pantalon{
+    font-size: .6em
+}
+
+@media (width <= 800px){
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    .menu_lateral .opciones .Carrito h1{
+        display: none;
+    }
+    
+    .menu_lateral .opciones .Carrito a{
+        display: none;
+    }
+    
+    .abrir,  .cerrar i{
+        color: var(--color-fuentes);
+    }
+
+    .menu_lateral .opciones .opciones_menu ul .ver-carrito{
+        display: block;
+    }
+    
+    .ecommerCampus{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 
+        "menu"
+        "product";
+        }
+    
+    
+    .menu_lateral{
+        display: flex;
+        height: 10vh;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menu_lateral .logo{
+        height: 10vh;
+        margin: 2vh;
+        color: var(--color-cuarto);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .menu_lateral .abrir{
+        margin: 2vh;
+        font-size: 2em;
+    }
+    
+    .imagenes_productos{
+        justify-content: center;
+    }
+    
+    .abrir, .cerrar{
+        display: block;
+        background: none;
+        border: none;
+    }
+    
+    .opciones{
+        background: var(--color-cuarto);
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    
+    .opciones.visible{
+        height: 40vh;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .opciones .cerrar{
+        margin: 2vh;
+    }
+    
+    .opciones .cerrar i{
+        font-size: 3em;
+    }
+    
+    .opciones .opciones_menu{
+        background: var(--color-menu-movil);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .opciones .opciones_menu li{
+        margin-bottom: 2vh;
+    }
+
+    .opciones_carrito{
+        margin: 0vh;
+    }
+    
+    
+    }

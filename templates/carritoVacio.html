@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='{{url_for("static", filename="css/carritoVacio.css")}}'/>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <section class="ecommerCampus">
+        <div class="menu_lateral">
+            <div class="logo">
+                <h1>CampusShop</h1>
+            </div>
+            <button class="abrir" id="abrir"><i class='bx bx-menu'></i></button>
+            <div class="opciones" id="menu">
+                <button class="cerrar" id="cerrar"><i class='bx bx-menu'></i></button>
+                <div class="opciones_menu">
+                    <ul>
+                        <li><a href="/">Todos los productos</a></li>
+                        <li><a href="{{ url_for('abrigos') }}">Abrigos</a></li>
+                        <li><a href="{{ url_for('camisetas') }}">Camisetas</a></li>
+                        <li><a href="{{ url_for('pantalones') }}">Pantalones</a></li>
+                        <li><a href="{{ url_for('carrito') }}" class="ver-carrito">Carrito</a></li>
+                    </ul>
+                </div>
+                <div class="Carrito">
+                        <a  href="{{ url_for('carrito') }}" >Carrito</a>
+                        <h1>3</h1>
+                </div>
+            </div>
+        </div>
+        <div class="productos">
+            <h1>CARRITO</h1>
+            <div class="productos_comprados">
+                <h2>Carrito vacio</h2>
+            </div>
+            <div class="opciones_carrito">
+                <div class="vaciar">
+                    <button><a href="#">Vaciar Carrito</a></button>
+                </div>
+                <div class="Comprar">
+                    <div class="compra_total">
+                        <h1>Total</h1>
+                        <h1>$ 8.500</h1>
+                    </div>
+                    <div class="Comprar_Ahora">
+                        <button>Camprar Ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/main.js"></script>
+</body>
+</html>
